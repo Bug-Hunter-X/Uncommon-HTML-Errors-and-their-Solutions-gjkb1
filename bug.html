@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>Some text</p>
+  </div>
+  <script>
+    // Incorrect way to add an event listener
+    document.getElementById("myDiv").addEventListener("click", function() {
+      alert("Div clicked!");
+    });
+
+    //Another potential issue: Missing closing tag in a nested element.
+    //This could lead to unexpected rendering or layout issues.
+    //Example:
+    //<div><p>This is a paragraph<div>
+    //<p>This paragraph might be unintentionally nested.</p>
+    
+    //Incorrect way to manipulate DOM without checking if an element exists.
+    //document.getElementById("nonExistentElement").innerHTML = "Some text";
+
+    //Using deprecated or non-standard HTML elements or attributes.
+    //Example: Using the <font> tag.
+    //<font color="red">Red text</font>
+  </script>
+</body>
+</html>
