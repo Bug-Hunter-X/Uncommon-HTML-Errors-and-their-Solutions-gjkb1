@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>Some text</p>
+  </div>
+  <script>
+    // Correct way to add an event listener
+    const myDiv = document.getElementById("myDiv");
+    if (myDiv) {
+      myDiv.addEventListener("click", function() {
+        alert("Div clicked!");
+      });
+    }
+
+    //Corrected example - Ensuring proper closing tags:
+    // <div><p>This is a paragraph</p></div>
+    //<p>This paragraph is correctly nested.</p>
+    
+    //Correct way to manipulate the DOM with existence check
+    const nonExistentElement = document.getElementById("nonExistentElement");
+    if (nonExistentElement) {
+      nonExistentElement.innerHTML = "Some text";
+    } else {
+      console.error("Element not found");
+    }
+  </script>
+</body>
+</html>
